@@ -9,6 +9,6 @@ jobs:
   main:
     uses: deadsnakes/runbooks/.github/workflows/update-nightly.yml@main
     with:
-      dists-json: '["focal", "jammy", "noble"]'
+      dists-json: '["jammy", "noble"]'
       version: 3.14
     secrets: inherit
