@@ -124,6 +124,7 @@ excluded_imports = {
     'optparse': set(('gettext',)),
     # XXX: pathlib actually depends on ntpath: deadsnakes/issues#176
     'pathlib': set(('ntpath', 'urllib',)), # Windows only
+    'pathlib._local': set(('ntpath', 'urllib',)), # Windows only
     'pickle': set(('argparse', 'doctest', 'pprint')),
     'platform': {'_ios_support', 'ctypes', 'plistlib'},
     'reprlib': set(('_dummy_thread',)),
