@@ -8,10 +8,10 @@ Subject: disable a few xml tests
  2 files changed, 4 insertions(+)
 
 diff --git a/Lib/test/test_sax.py b/Lib/test/test_sax.py
-index 9b3014a..74f902e 100644
+index 0d0f86c..a5dcf37 100644
 --- a/Lib/test/test_sax.py
 +++ b/Lib/test/test_sax.py
-@@ -1240,6 +1240,7 @@ def test_flush_reparse_deferral_enabled(self):
+@@ -1241,6 +1241,7 @@ def test_flush_reparse_deferral_enabled(self):
  
          self.assertEqual(result.getvalue(), start + b"<doc></doc>")
  
