@@ -62,6 +62,7 @@ are:
   _weakref		builtin
   _weakrefset		module
   _warnings		builtin
+  annotationlib		module
   configparser		module
   abc			module
   argparse		module
