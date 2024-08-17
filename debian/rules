@@ -1228,7 +1228,6 @@ endif
 		usr/bin \
 		usr/share/man/man1 \
 		usr/share/doc/$(p_base)
-	cp -p Misc/SpecialBuilds.txt $(d_dbg)/usr/share/doc/$(p_base)/
 	cp -p debian/$(PVER)-dbg.README.Debian \
 		$(d_dbg)/usr/share/doc/$(p_base)/README.debug
 	cp -p $(buildd_debug)/python $(d_dbg)/usr/bin/$(PVER)d
@@ -1369,7 +1368,6 @@ endif
 		usr/bin \
 		usr/share/man/man1 \
 		usr/share/doc/$(p_base)
-	cp -p Misc/SpecialBuilds.txt $(d_nogil)/usr/share/doc/$(p_base)/
 	cp -p $(buildd_nogil)/python $(d_nogil)/usr/bin/$(PVER)t
 	ln -sf python$(VER)t $(d_nogil)/usr/bin/$(PVER)-nogil
 
