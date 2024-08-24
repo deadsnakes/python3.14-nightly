@@ -45,7 +45,7 @@ index 1aa4073..08a7e34 100644
  	@ # If app store compliance has been configured, apply the patch to the
  	@ # installed library code. The patch has been previously validated against
 diff --git a/configure.ac b/configure.ac
-index 5b907c5..87f8a1e 100644
+index 4b718a9..e06a2a5 100644
 --- a/configure.ac
 +++ b/configure.ac
 @@ -164,7 +164,7 @@ AC_ARG_WITH([build-python],
