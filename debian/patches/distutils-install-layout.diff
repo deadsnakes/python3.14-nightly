@@ -200,7 +200,7 @@ index 035913c..c23db4f 100644
          else:
              # other platforms
 diff --git a/Makefile.pre.in b/Makefile.pre.in
-index 1b34cb4..53bdec8 100644
+index 46733d0..a260db9 100644
 --- a/Makefile.pre.in
 +++ b/Makefile.pre.in
 @@ -159,7 +159,7 @@ WHEEL_PKG_DIR=	@WHEEL_PKG_DIR@
