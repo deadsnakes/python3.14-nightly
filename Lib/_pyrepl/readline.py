@@ -249,7 +249,7 @@ def _should_auto_indent(buffer: list[str], pos: int) -> bool:
     while pos > 0:
         pos -= 1
         if last_char is None:
-            if buffer[pos] not in " \t\n":  # ignore whitespaces
+            if buffer[pos] not in " \t\n#":  # ignore whitespaces and comments
                 last_char = buffer[pos]
         else:
             # even if we found a non-whitespace character before
@@ -365,8 +365,12 @@ class _ReadlineWrapper:
         except _error:
             assert raw_input is not None
             return raw_input(prompt)
-        reader.ps1 = str(prompt)
-        return reader.readline(startup_hook=self.startup_hook)
+        prompt_str = str(prompt)
+        reader.ps1 = prompt_str
+        sys.audit("builtins.input", prompt_str)
+        result = reader.readline(startup_hook=self.startup_hook)
+        sys.audit("builtins.input/result", result)
+        return result
 
     def multiline_input(self, more_lines: MoreLinesCallable, ps1: str, ps2: str) -> str:
         """Read an input on possibly multiple lines, asking for more
